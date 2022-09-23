@@ -1,0 +1,125 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.menu-container {
+  color: #fff;
+  background-color: #5995DA;
+  /* Blue */
+  padding: 20px 0;
+
+  /* makes the menu-container element a flex container 
+    enables flexbox layout mode - other flexbox properties 
+    will be ignored by the browser if we do not add this */
+  display: flex;
+
+  /* define the horizontal alignment of the flex container's items */
+  justify-content: center;
+}
+
+.menu {
+  border: 1px solid #fff;
+  width: 900px;
+  /* .menu element is a nested flex container */
+  display: flex;
+  /* distritbute child elements equally */
+  justify-content: space-around;
+}
+
+.links {
+  border: 1px solid #fff;
+  /* For debugging */
+  display: flex;
+  justify-content: flex-end;
+}
+.signup {
+  margin-left: auto;
+}
+.login {
+  margin-left: 20px;
+}
+
+/* header section */
+
+.header-container {
+  color: #5995DA;
+  background-color: #D6E9FE;
+  display: flex;
+
+  /* horizontally centers content */
+  justify-content: center;
+}
+
+.header {
+  width: 900px;
+  /* setting the height here dictates the height of the row
+  if it is not set with the height property, rows will be automatically be the height of their content
+  */
+  height: 300px;
+  display: flex;
+  justify-content: space-between;
+
+  /* vertically centers content */
+  align-items: center;
+}
+
+.social,
+.subscribe {
+  align-self: flex-end;
+  margin-bottom: 20px;
+}
+
+
+/* Photo grid section */
+.photo-grid-container {
+  display: flex;
+  justify-content: center;
+}
+
+.photo-grid {
+  width: 900px;
+  display: flex;
+  justify-content: center;
+  /* Adding the following flex-wrap property forces items that don’t fit to get bumped down to the next row: */
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+}
+.first-item {
+  order: 1;
+}
+
+.last-item {
+  order: -1;
+}
+.photo-grid-item {
+  border: 1px solid #fff;
+  width: 300px;
+  height: 300px;
+}
+
+/* footer section */
+.footer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-item {
+  border: 1px solid #fff;
+  background-color: #D6E9FE;
+  height: 200px;
+  flex: 1;
+}
+
+.footer-three {
+  flex: 2;
+} 
+
+.footer-one,
+.footer-three {
+  background-color: #5995DA;
+  flex: initial;
+  width: 300px;
+}
